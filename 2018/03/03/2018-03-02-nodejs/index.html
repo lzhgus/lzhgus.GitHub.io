@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Node.Js,MongoDB,Express," />
 
 
 
@@ -96,13 +96,24 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kazehaya">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+<meta name="description" content="30分钟配置并运行 full stack web 页面， 30分钟完成与DB的交互 Introduction现在大概有上百万个关于用Node.js搭建“Hello，World”的教程。如果你的目标是问候这个世界然后放弃自己的职业生涯，那已经足够了。 然而大部分的我们并不是这样的， 所以我们要寻找更多更好的教程。 我也寻找了不少， 所以总结了很多， 希望这个教程能够对刚开始学习Node.js 或者想">
+<meta name="keywords" content="Node.Js,MongoDB,Express">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用 Node.Js Express MongoDB 搭建 Web 应用">
+<meta property="og:url" content="http://yoursite.com/2018/03/03/2018-03-02-nodejs/index.html">
 <meta property="og:site_name" content="Kazehaya">
+<meta property="og:description" content="30分钟配置并运行 full stack web 页面， 30分钟完成与DB的交互 Introduction现在大概有上百万个关于用Node.js搭建“Hello，World”的教程。如果你的目标是问候这个世界然后放弃自己的职业生涯，那已经足够了。 然而大部分的我们并不是这样的， 所以我们要寻找更多更好的教程。 我也寻找了不少， 所以总结了很多， 希望这个教程能够对刚开始学习Node.js 或者想">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/uploads/2018-03-02-01.png">
+<meta property="og:image" content="http://yoursite.com/uploads/2018-03-02-02.png">
+<meta property="og:image" content="http://yoursite.com/uploads/2018-03-02-03.png">
+<meta property="og:image" content="http://yoursite.com/uploads/2018-03-02-04.png">
+<meta property="og:image" content="http://yoursite.com/uploads/2018-03-02-05.png">
+<meta property="og:updated_time" content="2018-03-05T04:49:00.251Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kazehaya">
+<meta name="twitter:title" content="用 Node.Js Express MongoDB 搭建 Web 应用">
+<meta name="twitter:description" content="30分钟配置并运行 full stack web 页面， 30分钟完成与DB的交互 Introduction现在大概有上百万个关于用Node.js搭建“Hello，World”的教程。如果你的目标是问候这个世界然后放弃自己的职业生涯，那已经足够了。 然而大部分的我们并不是这样的， 所以我们要寻找更多更好的教程。 我也寻找了不少， 所以总结了很多， 希望这个教程能够对刚开始学习Node.js 或者想">
+<meta name="twitter:image" content="http://yoursite.com/uploads/2018-03-02-01.png">
 
 
 
@@ -131,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2018/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/03/2018-03-02-nodejs/"/>
 
 
 
 
 
-  <title>归档 | Kazehaya</title>
+  <title>用 Node.Js Express MongoDB 搭建 Web 应用 | Kazehaya</title>
   
 
 
@@ -162,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -290,74 +301,181 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 1 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/03/2018-03-02-nodejs/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kazehaya">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kazehaya">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/03/03/2018-03-02-nodejs/" itemprop="url">
-              
-                <span itemprop="name">用 Node.Js Express MongoDB 搭建 Web 应用</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">用 Node.Js Express MongoDB 搭建 Web 应用</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-03T01:12:09-05:00"
-              content="2018-03-03" >
-          03-03
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-03T01:12:09-05:00">
+                2018-03-03
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/03/03/2018-03-02-nodejs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/03/03/2018-03-02-nodejs/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>30分钟配置并运行 full stack web 页面， 30分钟完成与DB的交互</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>现在大概有上百万个关于用Node.js搭建“Hello，World”的教程。如果你的目标是问候这个世界然后放弃自己的职业生涯，那已经足够了。 然而大部分的我们并不是这样的， 所以我们要寻找更多更好的教程。 我也寻找了不少， 所以总结了很多， 希望这个教程能够对刚开始学习Node.js 或者想从事网页开发的你有所帮助。</p>
+<h2 id="Part-1-15分钟的安装"><a href="#Part-1-15分钟的安装" class="headerlink" title="Part 1 - 15分钟的安装"></a>Part 1 - 15分钟的安装</h2><h3 id="Step-1-安装-Node-js-和-NPM"><a href="#Step-1-安装-Node-js-和-NPM" class="headerlink" title="Step 1 - 安装 Node.js 和 NPM"></a>Step 1 - 安装 Node.js 和 NPM</h3><ol>
+<li>XCode 在Mac上安装XCode</li>
+<li><p>Homebrew 这是Mac上用于package管理的</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打开Terminal 安装node.js</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install node</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="Step2-安装-Express-Generator"><a href="#Step2-安装-Express-Generator" class="headerlink" title="Step2 - 安装 Express Generator"></a>Step2 - 安装 Express Generator</h3><p>Express 是基于Node.js的Web开发框架，可以快速地搭建一个完整功能的网站<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g express-generator</span><br></pre></td></tr></table></figure></p>
+<p>More info: <a href="http://javascript.ruanyifeng.com/nodejs/express.html" target="_blank" rel="noopener">Express</a></p>
+<h3 id="Step3-创建-Express-项目"><a href="#Step3-创建-Express-项目" class="headerlink" title="Step3 - 创建 Express 项目"></a>Step3 - 创建 Express 项目</h3><p>这里我们将会用到Express和Jade，而不是常用的CSS. 因为我们必须用Jade或者其他的模板引擎去得到基于Node/Express的数据。 </p>
+<p>现在我们用express来创建一个叫做 nodetest1 的项目</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ express nodetest1</span><br></pre></td></tr></table></figure>
+<p><img src="/uploads/2018-03-02-01.png" alt="alt text"></p>
+<p>More info: <a href="https://segmentfault.com/a/1190000000357534" target="_blank" rel="noopener">Jade</a></p>
+<h3 id="Step4-修改-Dependencies"><a href="#Step4-修改-Dependencies" class="headerlink" title="Step4 - 修改 Dependencies"></a>Step4 - 修改 Dependencies</h3><p>Express-generator 自动帮我们创建了package.json文件</p>
+<p><img src="/uploads/2018-03-02-02.png" alt="alt text"></p>
+<p>这个文件里包含了项目所有的dependencies. 我们将添加MongoDB和Monk, 版本3.0.1/6.0.5</p>
+<p><img src="/uploads/2018-03-02-03.png" alt="alt text"></p>
+<h3 id="Step5-安装-Dependencies"><a href="#Step5-安装-Dependencies" class="headerlink" title="Step5 - 安装 Dependencies"></a>Step5 - 安装 Dependencies</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>npm 将会根据JSON文件安装所有所需求的dependencies, 包括Express， 我们虽然安装了全局的Express，但是对于指定的项目我们还是需要安装实际的module.<br>现在我们就可以跑项目了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
+<p><img src="/uploads/2018-03-02-04.png" alt="alt text"></p>
+<p>如图可见就是我们运行起来的Node.JS的webserver， 下面有一些Express.js的Cheat Sheet</p>
+<p>More info: <a href="https://github.com/azat-co/cheatsheets/tree/master/express4" target="_blank" rel="noopener">Express.js</a></p>
+<h2 id="Part-2-哈哈-既然打开了Node-Js的大门-我们也要高喊一声-“Hello-World”"><a href="#Part-2-哈哈-既然打开了Node-Js的大门-我们也要高喊一声-“Hello-World”" class="headerlink" title="Part 2 哈哈 既然打开了Node.Js的大门 我们也要高喊一声 “Hello, World”"></a>Part 2 哈哈 既然打开了Node.Js的大门 我们也要高喊一声 “Hello, World”</h2><p>随便有你喜欢的IDE或者editor打开我们项目中的 app.js</p>
+<p><img src="/uploads/2018-03-02-05.png" alt="alt text"></p>
+<p>在app.js中我们建了一串Javascript变量， 它们关联到特定的packages，depen， node functionality 和 routes. Routes在setup中把models和controllers组合起来，当然我们也可以用Express来搭建MVC架构， 之后我可以单独的介绍. 我们先暂时忽略Express为我们创建的user route， 我们现在只用到最顶层的route (/node/nodetest1/routes/index.js)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> app = express();</span><br></pre></td></tr></table></figure>
+<p>这将会初始化Express同时设置所有的app 变量. 下一节中我们会用这些变量配置我们的Express</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.js</span></span><br><span class="line">app.set(<span class="string">'views'</span>, path.join(dirname, <span class="string">'views'</span>));</span><br><span class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'jade'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// uncomment after placing your favicon in /public</span></span><br><span class="line"><span class="comment">// app.use(favicon(dirname + '/public/favicon.ico'));</span></span><br><span class="line">app.use(logger(<span class="string">'dev'</span>));</span><br><span class="line">app.use(bodyParser.json());</span><br><span class="line">app.use(bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;));</span><br><span class="line">app.use(cookieParser());</span><br><span class="line">app.use(express.static(path.join(__dirname, <span class="string">'public'</span>)));</span><br><span class="line"></span><br><span class="line">app.use(<span class="string">'/'</span>, routes);</span><br><span class="line">app.use(<span class="string">'/users'</span>, users);</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://blog.csdn.net/qq_14998713/article/details/62416901" target="_blank" rel="noopener">Morgan</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Node-Js/" rel="tag"># Node.Js</a>
+          
+            <a href="/tags/MongoDB/" rel="tag"># MongoDB</a>
+          
+            <a href="/tags/Express/" rel="tag"># Express</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
-    </div>
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -365,6 +483,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="hypercomments_widget"></div>
+    
+  </div>
+
 
         </div>
         
@@ -385,8 +509,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/me.jpg"
@@ -470,6 +603,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-1-15分钟的安装"><span class="nav-number">2.</span> <span class="nav-text">Part 1 - 15分钟的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-1-安装-Node-js-和-NPM"><span class="nav-number">2.1.</span> <span class="nav-text">Step 1 - 安装 Node.js 和 NPM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step2-安装-Express-Generator"><span class="nav-number">2.2.</span> <span class="nav-text">Step2 - 安装 Express Generator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step3-创建-Express-项目"><span class="nav-number">2.3.</span> <span class="nav-text">Step3 - 创建 Express 项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step4-修改-Dependencies"><span class="nav-number">2.4.</span> <span class="nav-text">Step4 - 修改 Dependencies</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step5-安装-Dependencies"><span class="nav-number">2.5.</span> <span class="nav-text">Step5 - 安装 Dependencies</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-2-哈哈-既然打开了Node-Js的大门-我们也要高喊一声-“Hello-World”"><span class="nav-number">3.</span> <span class="nav-text">Part 2 哈哈 既然打开了Node.Js的大门 我们也要高喊一声 “Hello, World”</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -590,11 +739,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   
@@ -619,6 +766,8 @@
 
 		_hcwp.push({widget:"Bloggerstream", widget_id: 102043, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
+		
+		_hcwp.push({widget:"Stream", widget_id: 102043, xid: "2018/03/03/2018-03-02-nodejs/"});
 		
 
 		(function() {
