@@ -83,6 +83,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/rss2.xml" title="Kazehaya" type="application/atom+xml" />
 
@@ -110,7 +112,8 @@
 <meta property="og:image" content="http://yoursite.com/uploads/2018-03-02-04.png">
 <meta property="og:image" content="http://yoursite.com/uploads/2018-03-02-05.png">
 <meta property="og:image" content="http://yoursite.com/uploads/2018-03-02-06.png">
-<meta property="og:updated_time" content="2018-03-21T03:45:44.585Z">
+<meta property="og:image" content="http://yoursite.com/uploads/2018-03-02-07.png">
+<meta property="og:updated_time" content="2018-03-22T00:45:11.377Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用 Node.Js Express MongoDB 搭建 Web 应用">
 <meta name="twitter:description" content="Introduction现在大概有上百万个关于用Node.js搭建“Hello，World”的教程。如果你的目标是问候这个世界然后放弃自己的职业生涯，那已经足够了。 然而大部分的我们并不是这样的， 所以我们要寻找更多更好的教程。 我也寻找了不少， 所以总结了很多， 希望这个教程能够对刚开始学习Node.js 或者想从事网页开发的你有所帮助。 Part 1 - 15分钟的安装Step 1 - 安装">
@@ -486,7 +489,17 @@
 <li><a href="https://www.npmjs.com/package/monk" target="_blank" rel="noopener">Monk</a></li>
 <li><a href="https://codeday.me/bug/20170727/47313.html" target="_blank" rel="noopener">Monk vs Mongoose</a> </li>
 </ul>
-<h3 id="Step-6-–-从Mongo中读取并展示数据"><a href="#Step-6-–-从Mongo中读取并展示数据" class="headerlink" title="Step 6 – 从Mongo中读取并展示数据"></a>Step 6 – 从Mongo中读取并展示数据</h3>
+<h3 id="Step-6-–-从Mongo中读取并展示数据"><a href="#Step-6-–-从Mongo中读取并展示数据" class="headerlink" title="Step 6 – 从Mongo中读取并展示数据"></a>Step 6 – 从Mongo中读取并展示数据</h3><p>打开routes\index.js, 我们有index route 和 helloworld 两个route. 现在加入第三个</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//C:\node\nodetest1\routes\index.js</span></span><br><span class="line"><span class="comment">// GET Userlist page. </span></span><br><span class="line">router.get(<span class="string">'/userlist'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> db = req.db;</span><br><span class="line">    <span class="keyword">var</span> collection = db.get(<span class="string">'usercollection'</span>);</span><br><span class="line">    collection.find(&#123;&#125;,&#123;&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">e,docs</span>)</span>&#123;</span><br><span class="line">        res.render(<span class="string">'userlist'</span>, &#123;</span><br><span class="line">            <span class="string">"userlist"</span> : docs</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>我们从传到http的请求中提取”db“对象， 然后用db的connection中得到数据， 并和其他两个”gets”一样用来渲染页面。<br>基本上说就是我们告诉app将要用到“usercollection”， 从而返回一个变量“docs”， 一旦我们得到了这个数据， 我们用来渲染userlist（需要一个配套的Jade模板。</p>
+<p>下一步，配置Jade 模板，在C:\node\nodetest1\views\ 中找到index.jade， 保存为userlist.jade</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">extends layout</span><br><span class="line"></span><br><span class="line">block content</span><br><span class="line">  h1.</span><br><span class="line">    User List</span><br><span class="line">  ul</span><br><span class="line">    each user, i in userlist</span><br><span class="line">      li</span><br><span class="line">        a(href=&quot;mailto:#&#123;user.email&#125;&quot;)= user.username</span><br></pre></td></tr></table></figure>
+<p>在index.js route 中我们传递了userlist 这个变量到Jade template， 然后遍历这个变量，可拿到username以及email信息， 并以展现。</p>
+<p>如果node server此刻还在运行的话， ctrl-c以中断， 然后restart server</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
+<p>现在打开浏览器， 输入<a href="http://localhost:3000/userlist，" target="_blank" rel="noopener">http://localhost:3000/userlist，</a> 我们就能看到userlist 页面了。</p>
+<p><img src="/uploads/2018-03-02-07.png" alt="alt text"></p>
+
       
     </div>
     
